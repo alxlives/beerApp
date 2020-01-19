@@ -2,7 +2,7 @@
 //  HomeModels.swift
 //  Beer App
 //
-//  Created by MacDev on 17/01/20.
+//  Created by Alexandre Abreu on 17/01/20.
 //
 
 import UIKit

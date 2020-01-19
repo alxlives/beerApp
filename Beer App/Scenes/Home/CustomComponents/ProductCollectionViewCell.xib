@@ -35,7 +35,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="q0V-QN-MIY" secondAttribute="bottom" constant="14.5" id="3TH-do-icS"/>
                                 <constraint firstItem="GtR-m5-Thk" firstAttribute="top" secondItem="5bE-kN-5zq" secondAttribute="top" constant="16" id="E17-Xt-ZWY"/>
@@ -47,7 +47,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.81320896921326236" green="0.84188610406091369" blue="0.83000176307550677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="1" green="0.9882352941176471" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="5bE-kN-5zq" firstAttribute="centerY" secondItem="5SS-Lo-Yyf" secondAttribute="centerY" id="02z-Pw-7Pa"/>
                         <constraint firstAttribute="trailing" secondItem="5bE-kN-5zq" secondAttribute="trailing" constant="16" id="5yp-cD-CTa"/>
@@ -61,7 +61,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="5SS-Lo-Yyf" secondAttribute="bottom" constant="8" id="Bgl-27-6xM"/>
                 <constraint firstItem="5SS-Lo-Yyf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="IzV-nv-juo"/>

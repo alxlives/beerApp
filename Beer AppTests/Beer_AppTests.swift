@@ -2,8 +2,8 @@
 //  Beer_AppTests.swift
 //  Beer AppTests
 //
-//  Created by MacDev on 17/01/20.
-//  Copyright © 2020 MacDev. All rights reserved.
+//  Created by Alexandre Abreu on 17/01/20.
+//  Copyright © 2020 Alexandre Abreu. All rights reserved.
 //
 
 import XCTest

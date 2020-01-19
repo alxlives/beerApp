@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  Beer App
 //
-//  Created by MacDev on 17/01/20.
+//  Created by Alexandre Abreu on 17/01/20.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ protocol HomeDisplayLogic: class {
 }
 
 class HomeViewController: UIViewController {
-
+    
     var interactor: HomeBusinessLogic?
     var beerList: [Beer] = []
     
@@ -23,12 +23,12 @@ class HomeViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
-  
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
-  
+    
     private func setup() {
         let viewController = self
         let interactor = HomeInteractor()
@@ -37,19 +37,22 @@ class HomeViewController: UIViewController {
         interactor.presenter = presenter
         presenter.viewController = viewController
     }
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.collectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionViewCell")
-
+        self.title = "Home"
+        registerCollectionCells()
         getBeerList()
-     }
-  
+    }
+    
+    func registerCollectionCells() {
+        self.collectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionViewCell")
+    }
+    
     func getBeerList() {
-       interactor?.getBeerList()
-     }
-
+        interactor?.getBeerList()
+    }
+    
 }
 
 extension HomeViewController: HomeDisplayLogic {
@@ -61,7 +64,7 @@ extension HomeViewController: HomeDisplayLogic {
         DispatchQueue.main.async {
             self.collectionView.delegate = self
             self.collectionView.dataSource = self
-           }
+        }
     }
     
     func showBeerListError(_ msg: String) {

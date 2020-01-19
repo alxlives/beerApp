@@ -3,7 +3,7 @@
 //  Beer App
 //
 //  Created by Alexandre Abreu on 17/01/20.
-//  Copyright © 2020 MacDev. All rights reserved.
+//  Copyright © 2020 Alexandre Abreu. All rights reserved.
 //
 
 import UIKit
@@ -16,7 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         self.window = self.window ?? UIWindow()
-        self.window!.rootViewController = HomeViewController()
+        
+        let navigationController = UINavigationController(rootViewController: HomeViewController())
+        
+        navigationController.navigationBar.barTintColor = UIColor(red:1.00, green:0.99, blue:0.51, alpha:1.0)
+        
+        navigationController.navigationBar.isTranslucent = false
+        
+        self.window!.rootViewController = navigationController
         self.window!.makeKeyAndVisible()
         
         return true
