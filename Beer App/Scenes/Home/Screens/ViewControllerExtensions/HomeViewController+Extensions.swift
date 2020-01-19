@@ -25,6 +25,7 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
          let sectionInset = (collectionViewLayout as! UICollectionViewFlowLayout).sectionInset
          let referenceHeight: CGFloat = 300
          let referenceWidth = collectionView.safeAreaLayoutGuide.layoutFrame.width
@@ -34,5 +35,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
              - collectionView.contentInset.right
          return CGSize(width: referenceWidth, height: referenceHeight)
      }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let selectedBeer = beerList[indexPath.row]
+        router?.routeToDetails(beer: selectedBeer)
+        
+    }
     
 }

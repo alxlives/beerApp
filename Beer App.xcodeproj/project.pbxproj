@@ -21,7 +21,6 @@
 		17D5612F23D274380064A81E /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5612523D274370064A81E /* HomeModels.swift */; };
 		17D5613023D274380064A81E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5612623D274370064A81E /* HomePresenter.swift */; };
 		17D5613723D2745D0064A81E /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5613123D2745D0064A81E /* DetailsPresenter.swift */; };
-		17D5613823D2745D0064A81E /* DetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5613223D2745D0064A81E /* DetailsWorker.swift */; };
 		17D5613923D2745D0064A81E /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5613323D2745D0064A81E /* DetailsRouter.swift */; };
 		17D5613A23D2745D0064A81E /* DetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5613423D2745D0064A81E /* DetailsModels.swift */; };
 		17D5613B23D2745D0064A81E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5613523D2745D0064A81E /* DetailsViewController.swift */; };
@@ -63,7 +62,6 @@
 		17D5612523D274370064A81E /* HomeModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		17D5612623D274370064A81E /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		17D5613123D2745D0064A81E /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
-		17D5613223D2745D0064A81E /* DetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWorker.swift; sourceTree = "<group>"; };
 		17D5613323D2745D0064A81E /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
 		17D5613423D2745D0064A81E /* DetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModels.swift; sourceTree = "<group>"; };
 		17D5613523D2745D0064A81E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -207,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				17D5613123D2745D0064A81E /* DetailsPresenter.swift */,
-				17D5613223D2745D0064A81E /* DetailsWorker.swift */,
 				17D5613323D2745D0064A81E /* DetailsRouter.swift */,
 				17D5613423D2745D0064A81E /* DetailsModels.swift */,
 				17D5613523D2745D0064A81E /* DetailsViewController.swift */,
@@ -362,7 +359,6 @@
 				172CF05523D278FF0083B544 /* BeersResponse.swift in Sources */,
 				17D560F123D2722D0064A81E /* AppDelegate.swift in Sources */,
 				17D5612C23D274380064A81E /* HomeViewController.swift in Sources */,
-				17D5613823D2745D0064A81E /* DetailsWorker.swift in Sources */,
 				17D5612E23D274380064A81E /* HomeWorker.swift in Sources */,
 				17D5612D23D274380064A81E /* HomeRouter.swift in Sources */,
 				17D5612F23D274380064A81E /* HomeModels.swift in Sources */,

@@ -17,16 +17,9 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        
         holderView.layer.cornerRadius = 10
         holderView.layer.borderWidth = 1.0
-
         holderView.layer.borderColor = UIColor.clear.cgColor
-
-        holderView.layer.shadowColor = UIColor.gray.cgColor
-        holderView.layer.shadowRadius = 4.0
-        holderView.layer.shadowOpacity = 0.3
-        holderView.layer.masksToBounds = false
     }
     
     func setupCell(beer: Beer) {

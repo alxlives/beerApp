@@ -8,14 +8,15 @@
 import UIKit
 
 protocol DetailsPresentationLogic {
-	func presentSomething()
+    func presentBeerData(_ beer:Beer)
 }
 
 class DetailsPresenter: DetailsPresentationLogic {
 
 	weak var viewController: DetailsDisplayLogic?
 
-	func presentSomething() {
-		viewController?.showSuccess()
+	func presentBeerData(_ beer:Beer) {
+        let viewModel = DetailsViewModel(beer: beer)
+        viewController?.showSuccess(viewModel: viewModel)
 	}
 }

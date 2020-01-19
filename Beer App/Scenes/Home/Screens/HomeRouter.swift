@@ -7,12 +7,18 @@
 
 import UIKit
 
-@objc protocol HomeRoutingLogic {
-
+protocol HomeRoutingLogic {
+    func routeToDetails(beer: Beer)
 }
 
 class HomeRouter: NSObject, HomeRoutingLogic {
 
     weak var viewController: HomeViewController?
+
+    func routeToDetails(beer: Beer) {
+        let detailsViewController = DetailsViewController()
+        detailsViewController.interactor?.dataStore = DetailsDataStore(beer: beer)
+        viewController?.navigationController?.pushViewController(detailsViewController, animated: true)
+    }
 
 }

@@ -8,17 +8,21 @@
 import UIKit
 
 protocol DetailsBusinessLogic {
-    func doSomething()
+    func getFieldsData()
+    var dataStore: DetailsDataStore { get set }
 }
 
 class DetailsInteractor: DetailsBusinessLogic {
 
     var presenter: DetailsPresentationLogic?
-    var worker: DetailsWorker! = DetailsWorker()
+    var dataStore: DetailsDataStore = DetailsDataStore()
 
-    func doSomething() {
-        worker.doSomeWork()
-        presenter?.presentSomething()
+    func getFieldsData() {
+        guard let beer = dataStore.beer else {
+            return
+        }
+        presenter?.presentBeerData(beer)
     }
 
 }
+

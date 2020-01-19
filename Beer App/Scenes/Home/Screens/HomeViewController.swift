@@ -15,6 +15,8 @@ protocol HomeDisplayLogic: class {
 class HomeViewController: UIViewController {
     
     var interactor: HomeBusinessLogic?
+    var router: HomeRouter?
+    
     var beerList: [Beer] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -33,7 +35,10 @@ class HomeViewController: UIViewController {
         let viewController = self
         let interactor = HomeInteractor()
         let presenter = HomePresenter()
+        let router = HomeRouter()
+        router.viewController = viewController
         viewController.interactor = interactor
+        viewController.router = router
         interactor.presenter = presenter
         presenter.viewController = viewController
     }

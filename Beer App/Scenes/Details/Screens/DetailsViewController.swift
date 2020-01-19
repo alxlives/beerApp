@@ -8,14 +8,21 @@
 import UIKit
 
 protocol DetailsDisplayLogic: class {
-    func showSuccess()
+    func showSuccess(viewModel: DetailsViewModel)
     func showError(msg: String)
 }
 
 class DetailsViewController: UIViewController {
 
-    var interactor: DetailsBusinessLogic?
+    var interactor: DetailsBusinessLogic? = DetailsInteractor()
   
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblTagline: UILabel!
+    @IBOutlet weak var lblAbv: UILabel!
+    @IBOutlet weak var lblIbu: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -28,29 +35,34 @@ class DetailsViewController: UIViewController {
   
     private func setup() {
         let viewController = self
-        let interactor = DetailsInteractor()
         let presenter = DetailsPresenter()
+        let currentInteractor = interactor as! DetailsInteractor
         viewController.interactor = interactor
-        interactor.presenter = presenter
+        currentInteractor.presenter = presenter
         presenter.viewController = viewController
     }
   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Detalhes"
-        doSomething()
+        getFieldsData()
      }
   
-    func doSomething() {
-       interactor?.doSomething()
+    func getFieldsData() {
+       interactor?.getFieldsData()
      }
 
 }
 
 extension DetailsViewController: DetailsDisplayLogic {
     
-    func showSuccess() {
-
+    func showSuccess(viewModel: DetailsViewModel) {
+        self.lblName.text = viewModel.name
+        self.lblTagline.text = viewModel.tagline
+        self.lblAbv.text = viewModel.abv
+        self.lblIbu.text = viewModel.ibu
+        self.lblDescription.text = viewModel.description
+        self.imgView.image = UIImage(data: viewModel.imageData ?? Data())
     }
 
     func showError(msg: String) {
