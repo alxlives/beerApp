@@ -8,14 +8,17 @@
 import UIKit
 
 protocol HomeDisplayLogic: class {
-    func showSuccess()
-    func showError(msg: String)
+    func showBeerListSuccess(_ list: [Beer])
+    func showBeerListError(_ msg: String)
 }
 
 class HomeViewController: UIViewController {
 
     var interactor: HomeBusinessLogic?
-  
+    var beerList: [Beer] = []
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -37,23 +40,32 @@ class HomeViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        
+        self.collectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionViewCell")
+
+        getBeerList()
      }
   
-    func doSomething() {
-       interactor?.doSomething()
+    func getBeerList() {
+       interactor?.getBeerList()
      }
 
 }
 
 extension HomeViewController: HomeDisplayLogic {
     
-    func showSuccess() {
-
+    func showBeerListSuccess(_ list: [Beer]) {
+        self.beerList = list
+        
+        
+        DispatchQueue.main.async {
+            self.collectionView.delegate = self
+            self.collectionView.dataSource = self
+           }
     }
-
-    func showError(msg: String) {
-
+    
+    func showBeerListError(_ msg: String) {
+        
     }
     
 }

@@ -8,17 +8,22 @@
 import UIKit
 
 protocol HomeBusinessLogic {
-    func doSomething()
+    func getBeerList()
 }
 
 class HomeInteractor: HomeBusinessLogic {
 
     var presenter: HomePresentationLogic?
-    var worker: HomeWorker! = HomeWorker()
+    var worker: HomeWorkerProtocol = HomeWorker()
 
-    func doSomething() {
-        worker.doSomeWork()
-        presenter?.presentSomething()
+    func getBeerList() {
+        
+        worker.getBeerList(onSuccess: { (list) in
+            self.presenter?.presentBeerList(list)
+         }, onFailure: { (error) in
+            self.presenter?.presentError(error)
+         })
+        
     }
 
 }

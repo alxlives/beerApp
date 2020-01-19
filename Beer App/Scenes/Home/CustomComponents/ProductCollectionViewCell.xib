@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProductCollectionViewCell" customModule="Beer_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="418" height="294"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5SS-Lo-Yyf">
+                    <rect key="frame" x="16" y="8" width="386" height="278"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-ia-AMk">
+                            <rect key="frame" x="18" y="14" width="116" height="235"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bE-kN-5zq">
+                            <rect key="frame" x="150" y="93.5" width="220" height="91"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da cerveja" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtR-m5-Thk">
+                                    <rect key="frame" x="0.0" y="16" width="220" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Teor alcolico - 5.5%" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0V-QN-MIY">
+                                    <rect key="frame" x="0.0" y="56" width="220" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="q0V-QN-MIY" secondAttribute="bottom" constant="14.5" id="3TH-do-icS"/>
+                                <constraint firstItem="GtR-m5-Thk" firstAttribute="top" secondItem="5bE-kN-5zq" secondAttribute="top" constant="16" id="E17-Xt-ZWY"/>
+                                <constraint firstItem="q0V-QN-MIY" firstAttribute="top" secondItem="GtR-m5-Thk" secondAttribute="bottom" constant="19.5" id="RM4-ya-Kab"/>
+                                <constraint firstAttribute="trailing" secondItem="q0V-QN-MIY" secondAttribute="trailing" id="f7W-XV-VoI"/>
+                                <constraint firstItem="GtR-m5-Thk" firstAttribute="leading" secondItem="5bE-kN-5zq" secondAttribute="leading" id="fHc-Qj-QXY"/>
+                                <constraint firstAttribute="trailing" secondItem="GtR-m5-Thk" secondAttribute="trailing" id="pTt-n8-klP"/>
+                                <constraint firstItem="q0V-QN-MIY" firstAttribute="leading" secondItem="5bE-kN-5zq" secondAttribute="leading" id="paX-BM-sM7"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.81320896921326236" green="0.84188610406091369" blue="0.83000176307550677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="5bE-kN-5zq" firstAttribute="centerY" secondItem="5SS-Lo-Yyf" secondAttribute="centerY" id="02z-Pw-7Pa"/>
+                        <constraint firstAttribute="trailing" secondItem="5bE-kN-5zq" secondAttribute="trailing" constant="16" id="5yp-cD-CTa"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5bE-kN-5zq" secondAttribute="bottom" id="7ZB-1e-LoJ"/>
+                        <constraint firstItem="5bE-kN-5zq" firstAttribute="leading" secondItem="zCO-ia-AMk" secondAttribute="trailing" constant="16" id="djQ-w1-QMm"/>
+                        <constraint firstItem="zCO-ia-AMk" firstAttribute="leading" secondItem="5SS-Lo-Yyf" secondAttribute="leading" constant="18" id="e0b-SY-lQS"/>
+                        <constraint firstItem="zCO-ia-AMk" firstAttribute="top" secondItem="5SS-Lo-Yyf" secondAttribute="top" constant="14" id="ikC-xG-DLJ"/>
+                        <constraint firstAttribute="bottom" secondItem="zCO-ia-AMk" secondAttribute="bottom" constant="29" id="jlA-c6-QQD"/>
+                        <constraint firstItem="5bE-kN-5zq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5SS-Lo-Yyf" secondAttribute="top" id="qgc-fu-Cll"/>
+                        <constraint firstItem="zCO-ia-AMk" firstAttribute="width" secondItem="5SS-Lo-Yyf" secondAttribute="width" multiplier="0.3" id="vH9-9c-oij"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5SS-Lo-Yyf" secondAttribute="bottom" constant="8" id="Bgl-27-6xM"/>
+                <constraint firstItem="5SS-Lo-Yyf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="IzV-nv-juo"/>
+                <constraint firstItem="5SS-Lo-Yyf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Xyh-mD-YlO"/>
+                <constraint firstAttribute="trailing" secondItem="5SS-Lo-Yyf" secondAttribute="trailing" constant="16" id="eD2-zl-W7h"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="holderView" destination="5SS-Lo-Yyf" id="mo6-1m-eLm"/>
+                <outlet property="imgView" destination="zCO-ia-AMk" id="FSt-ad-Ica"/>
+                <outlet property="lblAbv" destination="q0V-QN-MIY" id="j0G-dZ-eXh"/>
+                <outlet property="lblName" destination="GtR-m5-Thk" id="zIE-Ap-6yo"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="-81.026785714285708"/>
+        </view>
+    </objects>
+</document>

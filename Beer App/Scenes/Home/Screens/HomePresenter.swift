@@ -8,14 +8,20 @@
 import UIKit
 
 protocol HomePresentationLogic {
-	func presentSomething()
+    func presentBeerList(_ list:[Beer])
+    func presentError(_ error:String)
 }
 
 class HomePresenter: HomePresentationLogic {
 
 	weak var viewController: HomeDisplayLogic?
 
-	func presentSomething() {
-		viewController?.showSuccess()
-	}
+    func presentBeerList(_ list:[Beer]) {
+        viewController?.showBeerListSuccess(list)
+    }
+    
+    func presentError(_ error:String) {
+        viewController?.showBeerListError(error)
+    }
+    
 }
