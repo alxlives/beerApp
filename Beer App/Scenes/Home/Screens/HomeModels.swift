@@ -7,20 +7,12 @@
 
 import UIKit
 
-enum HomeModel {
-  
-    enum Something {
-
-        struct Request {
+class HomeViewModel {
+    var list: [Beer] = []
     
-        }
-
-        struct Response {
-    
-        }
-    
-        struct ViewModel {
-    
-        }
+    convenience init(list: [Beer]) {
+        self.init()
+        self.list = list
     }
+    
 }

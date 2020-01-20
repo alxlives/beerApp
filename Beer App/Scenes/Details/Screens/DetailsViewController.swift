@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hero
 
 protocol DetailsDisplayLogic: class {
     func showSuccess(viewModel: DetailsViewModel)
@@ -45,6 +46,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Detalhes"
+        imgView.hero.id = "productAnimation"
         getFieldsData()
      }
   

@@ -18,6 +18,11 @@ class HomeRouter: NSObject, HomeRoutingLogic {
     func routeToDetails(beer: Beer) {
         let detailsViewController = DetailsViewController()
         detailsViewController.interactor?.dataStore = DetailsDataStore(beer: beer)
+        
+        viewController?.navigationController?.hero.isEnabled = true
+        viewController?.navigationController?.hero.navigationAnimationType = .fade
+        detailsViewController.hero.isEnabled = true
+
         viewController?.navigationController?.pushViewController(detailsViewController, animated: true)
     }
 

@@ -17,7 +17,8 @@ class HomePresenter: HomePresentationLogic {
 	weak var viewController: HomeDisplayLogic?
 
     func presentBeerList(_ list:[Beer]) {
-        viewController?.showBeerListSuccess(list)
+        let viewModel = HomeViewModel(list: list)
+        viewController?.showBeerListSuccess(viewModel)
     }
     
     func presentError(_ error:String) {

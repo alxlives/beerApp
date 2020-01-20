@@ -17,19 +17,22 @@
                     <rect key="frame" x="16" y="8" width="386" height="278"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-ia-AMk">
-                            <rect key="frame" x="18" y="14" width="116" height="235"/>
+                            <rect key="frame" x="18" y="14" width="150" height="235"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="aPr-e7-nKl"/>
+                            </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bE-kN-5zq">
-                            <rect key="frame" x="150" y="93.5" width="220" height="91"/>
+                            <rect key="frame" x="184" y="93.5" width="186" height="91"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da cerveja" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtR-m5-Thk">
-                                    <rect key="frame" x="0.0" y="16" width="220" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="16" width="186" height="20.5"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Teor alcolico - 5.5%" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0V-QN-MIY">
-                                    <rect key="frame" x="0.0" y="56" width="220" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="56" width="186" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -57,7 +60,6 @@
                         <constraint firstItem="zCO-ia-AMk" firstAttribute="top" secondItem="5SS-Lo-Yyf" secondAttribute="top" constant="14" id="ikC-xG-DLJ"/>
                         <constraint firstAttribute="bottom" secondItem="zCO-ia-AMk" secondAttribute="bottom" constant="29" id="jlA-c6-QQD"/>
                         <constraint firstItem="5bE-kN-5zq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5SS-Lo-Yyf" secondAttribute="top" id="qgc-fu-Cll"/>
-                        <constraint firstItem="zCO-ia-AMk" firstAttribute="width" secondItem="5SS-Lo-Yyf" secondAttribute="width" multiplier="0.3" id="vH9-9c-oij"/>
                     </constraints>
                 </view>
             </subviews>

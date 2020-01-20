@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeDisplayLogic: class {
-    func showBeerListSuccess(_ list: [Beer])
+    func showBeerListSuccess(_ viewModel: HomeViewModel)
     func showBeerListError(_ msg: String)
 }
 
@@ -16,8 +16,9 @@ class HomeViewController: UIViewController {
     
     var interactor: HomeBusinessLogic?
     var router: HomeRouter?
+    var viewModel: HomeViewModel?
     
-    var beerList: [Beer] = []
+    var transitionImage: UIImageView?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -50,6 +51,11 @@ class HomeViewController: UIViewController {
         getBeerList()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        transitionImage?.removeFromSuperview()
+    }
+    
     func registerCollectionCells() {
         self.collectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionViewCell")
     }
@@ -62,9 +68,8 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeDisplayLogic {
     
-    func showBeerListSuccess(_ list: [Beer]) {
-        self.beerList = list
-        
+    func showBeerListSuccess(_ viewModel: HomeViewModel) {
+        self.viewModel = viewModel
         
         DispatchQueue.main.async {
             self.collectionView.delegate = self
