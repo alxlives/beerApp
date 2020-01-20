@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -258,7 +258,6 @@
 				3152F6C44D753115971EA11B /* Pods-Beer AppTests.debug.xcconfig */,
 				916D244A87F5C6A6757B3213 /* Pods-Beer AppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -630,7 +629,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.Beer-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -649,7 +648,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.Beer-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
