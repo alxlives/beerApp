@@ -71,14 +71,18 @@ extension HomeViewController: HomeDisplayLogic {
     func showBeerListSuccess(_ viewModel: HomeViewModel) {
         self.viewModel = viewModel
         
-        DispatchQueue.main.async {
-            self.collectionView.delegate = self
-            self.collectionView.dataSource = self
-        }
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
     }
     
     func showBeerListError(_ msg: String) {
-        
+        let alert = UIAlertController(title: "Erro", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Tentar novamente", style: .default, handler: { action in
+            self.getBeerList()
+        }))
+
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
