@@ -6,11 +6,11 @@
 //
 
 import XCTest
-@testable import ___VARIABLE_Podname___
+@testable import Beer_App
 
 class DetailsViewControllerTest: XCTestCase {
  
-   var controller: DetailsViewController = DetailsViewController(nibName: nil, bundle: nil)
+   var controller: DetailsViewController = DetailsViewController()
    var interactor: DetailsInteractorMock!
    var controllerMock: DetailsViewControllerMock!
    
@@ -23,6 +23,7 @@ class DetailsViewControllerTest: XCTestCase {
        controller.interactor = interactor
        
        window = UIWindow()
+       _ = controller.view
    }
    
    override func tearDown() {

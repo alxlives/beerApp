@@ -7,18 +7,22 @@
 
 
 import XCTest
-@testable import 
+@testable import Beer_App
 
 class HomeWorkerMock: HomeWorkerProtocol {
-           
-  //  var presentErrorCalled = false
-    
+    var showError = false
 }
 
 extension HomeWorkerMock {
     
-    // func present(error message: String) {
-    //    presentErrorCalled = true
-    // }
+    func getBeerList(onSuccess: @escaping BeerListSuccess, onFailure: @escaping BeerListError) {
+        
+        if showError {
+            onFailure("error")
+            return
+        }
+        
+        onSuccess([Beer(id: 1, name: "beer", tagline: "tagline", image_url: "img.png", abv: 1.0, ibu: 2.0, description: "description")])
+    }
     
 }

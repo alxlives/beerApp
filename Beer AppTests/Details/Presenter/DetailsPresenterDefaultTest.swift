@@ -7,13 +7,13 @@
 
 
 import XCTest
-@testable import ___VARIABLE_Podname___
+@testable import Beer_App
 
 class DetailsPresenterDefaultTest: DetailsPresenterTest {
     
-    // func testError() {
-    //       interactor.presenter?.presentError(error: NSError())
-    //       XCTAssert(presenter.didPresentError, "didPresentError() should be called after fetching service list error")
-    //   }
+    func testPresentSuccess() {
+        presenter.presentBeerData(Beer(id: 1, name: "beer", tagline: "tag", image_url: "1.png", abv: 1.0, ibu: 2.0, description: "description"))
+        XCTAssert(controller.showSuccessCalled)
+    }
     
 }

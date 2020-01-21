@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import ___VARIABLE_Podname___
+@testable import Beer_App
 
 class DetailsInteractorTest: XCTestCase {
     

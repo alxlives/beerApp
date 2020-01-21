@@ -7,7 +7,7 @@
 
 
 import XCTest
-@testable import ___VARIABLE_Podname___
+@testable import Beer_App
 
 class DetailsPresenterTest: XCTestCase {
     
@@ -17,7 +17,7 @@ class DetailsPresenterTest: XCTestCase {
     override func setUp() {
         super.setUp()
         controller = DetailsViewControllerMock()
-        presenter.displayDelegate = controller
+        presenter.viewController = controller
     }
     
     override func tearDown() {

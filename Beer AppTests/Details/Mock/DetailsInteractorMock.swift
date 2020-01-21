@@ -7,20 +7,21 @@
 
 
 import XCTest
-@testable import ___VARIABLE_Podname___
+@testable import Beer_App
 
 class DetailsInteractorMock: DetailsBusinessLogic {
-    
+
+    var dataStore: DetailsDataStore = DetailsDataStore()
     var presenter: DetailsPresentationLogic?
        
-  //  var presentErrorCalled = false
+    var getFieldsDataCalled = false
     
 }
 
 extension DetailsInteractorMock {
     
-    // func present(error message: String) {
-    //    presentErrorCalled = true
-    // }
+    func getFieldsData() {
+        getFieldsDataCalled = true
+    }
     
 }

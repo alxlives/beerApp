@@ -7,13 +7,18 @@
 
 
 import XCTest
-@testable import 
+@testable import Beer_App
 
 class HomePresenterDefaultTest: HomePresenterTest {
     
-    // func testError() {
-    //       interactor.presenter?.presentError(error: NSError())
-    //       XCTAssert(presenter.didPresentError, "didPresentError() should be called after fetching service list error")
-    //   }
+    func testSuccess() {
+        presenter.presentBeerList([])
+        XCTAssert(controller.showListSuccessCalled)
+    }
+    
+    func testError() {
+        presenter.presentError("error")
+        XCTAssert(controller.showListErrorCalled)
+    }
     
 }

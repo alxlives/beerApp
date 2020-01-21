@@ -7,20 +7,25 @@
 
 
 import XCTest
-@testable import ___VARIABLE_Podname___
+@testable import Beer_App
 
 class DetailsViewControllerMock: DetailsDisplayLogic {
-        
+   
     var interactor: DetailsBusinessLogic?
 
-  //  var presentErrorCalled = false
-    
+    var showSuccessCalled = false
+    var showErrorCalled = false
+
 }
 
 extension DetailsViewControllerMock {
     
-    // func present(error message: String) {
-    //    presentErrorCalled = true
-    // }
+    func showSuccess(viewModel: DetailsViewModel) {
+        showSuccessCalled = true
+    }
+    
+    func showError(msg: String) {
+        showErrorCalled = true
+    }
     
 }

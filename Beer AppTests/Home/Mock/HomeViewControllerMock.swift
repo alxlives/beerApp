@@ -7,20 +7,25 @@
 
 
 import XCTest
-@testable import 
+@testable import Beer_App
 
 class HomeViewControllerMock: HomeDisplayLogic {
-        
+  
     var interactor: HomeBusinessLogic?
 
-  //  var presentErrorCalled = false
+    var showListErrorCalled = false
+    var showListSuccessCalled = false
     
 }
 
 extension HomeViewControllerMock {
     
-    // func present(error message: String) {
-    //    presentErrorCalled = true
-    // }
+    func showBeerListSuccess(_ viewModel: HomeViewModel) {
+        showListSuccessCalled = true
+    }
+    
+    func showBeerListError(_ msg: String) {
+        showListErrorCalled = true
+    }
     
 }

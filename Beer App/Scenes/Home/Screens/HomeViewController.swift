@@ -69,10 +69,12 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeDisplayLogic {
     
     func showBeerListSuccess(_ viewModel: HomeViewModel) {
-        self.viewModel = viewModel
-        
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
+        DispatchQueue.main.async {
+            self.viewModel = viewModel
+            
+            self.collectionView.delegate = self
+            self.collectionView.dataSource = self
+        }
     }
     
     func showBeerListError(_ msg: String) {
@@ -82,7 +84,9 @@ extension HomeViewController: HomeDisplayLogic {
             self.getBeerList()
         }))
 
-        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
 }

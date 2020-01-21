@@ -17,16 +17,12 @@ class HomePresenter: HomePresentationLogic {
 	weak var viewController: HomeDisplayLogic?
 
     func presentBeerList(_ list:[Beer]) {
-        DispatchQueue.main.async {
-            let viewModel = HomeViewModel(list: list)
-            self.viewController?.showBeerListSuccess(viewModel)
-        }
+        let viewModel = HomeViewModel(list: list)
+        self.viewController?.showBeerListSuccess(viewModel)
     }
     
     func presentError(_ error:String) {
-        DispatchQueue.main.async {
-            self.viewController?.showBeerListError(error)
-        }
+        self.viewController?.showBeerListError(error)
     }
     
 }

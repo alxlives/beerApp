@@ -6,13 +6,13 @@
 //
 
 import XCTest
-@testable import 
+@testable import Beer_App
 
 class HomeViewControllerDefaultTest: HomeViewControllerTest {
     
-    // func testError() {
-    //       interactor.presenter?.presentError(error: NSError())
-    //       XCTAssert(presenter.didPresentError, "didPresentError() should be called after fetching service list error")
-    //   }
+    func testLoad() {
+        controller.viewDidLoad()
+        XCTAssert(interactor.getListCalled)
+     }
     
 }

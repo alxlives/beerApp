@@ -7,20 +7,20 @@
 
 
 import XCTest
-@testable import 
+@testable import Beer_App
 
 class HomeInteractorMock: HomeBusinessLogic {
-    
+
     var presenter: HomePresentationLogic?
        
-  //  var presentErrorCalled = false
+    var getListCalled = false
     
 }
 
 extension HomeInteractorMock {
     
-    // func present(error message: String) {
-    //    presentErrorCalled = true
-    // }
+    func getBeerList() {
+        getListCalled = true
+    }
     
 }

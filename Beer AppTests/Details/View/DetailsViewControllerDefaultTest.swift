@@ -6,13 +6,13 @@
 //
 
 import XCTest
-@testable import ___VARIABLE_Podname___
+@testable import Beer_App
 
 class DetailsViewControllerDefaultTest: DetailsViewControllerTest {
     
-    // func testError() {
-    //       interactor.presenter?.presentError(error: NSError())
-    //       XCTAssert(presenter.didPresentError, "didPresentError() should be called after fetching service list error")
-    //   }
+    func testViewDidLoad() {
+        controller.viewDidLoad()
+        XCTAssert(interactor.getFieldsDataCalled)
+    }
     
 }

@@ -6,11 +6,11 @@
 //
 
 import XCTest
-@testable import 
+@testable import Beer_App
 
 class HomeViewControllerTest: XCTestCase {
  
-   var controller: HomeViewController = HomeViewController(nibName: nil, bundle: nil)
+   var controller: HomeViewController = HomeViewController()
    var interactor: HomeInteractorMock!
    var controllerMock: HomeViewControllerMock!
    
@@ -23,6 +23,7 @@ class HomeViewControllerTest: XCTestCase {
        controller.interactor = interactor
        
        window = UIWindow()
+       _ = controller.view
    }
    
    override func tearDown() {
